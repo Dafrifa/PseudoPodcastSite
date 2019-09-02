@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="CSS/main.css">
+  <link rel="stylesheet" href="CSS/swirl.css">
+  <link rel="stylesheet" href="CSS/search.css">
+  <link rel="stylesheet" href="CSS/skew.css">
+</head>
+<body>
+
+<div class="dropdown">
+  <button class="dropbtn">Entry/Media</button>
+  <div class="dropdown-content">
+    <button class = "switch" onclick="toggleUserStream(stream1, user1, user1Text)">  <span id="user1Text">User1 OFF</span></button>
+    <button class = "switch" onclick="toggleUserStream(stream2, user2, user2Text)"><span id = "user2Text">User2 OFF</span></button>
+    <button class = "switch" onclick="toggleUserStream(stream3, user3, user3Text)"><span id = "user3Text">User3 OFF</span></button>
+    <button class = "switch" onclick="toggleUserStream(stream4, user4, user4Text)"><span id = "user4Text">User4 OFF</span></button>
+    <button class = "switch" onclick="toggleUserStream(stream5, user5, user5Text)"><span id = "user5Text">User5 OFF</span></button>
+    <button class = "switch" onclick="toggleUserStream(guest, user6, guesttext)"><span id = "guestText">Guest OFF</span></button>
+    <button class = "switch" onclick="linkStream()"><span id = "socialText">Switch button   </span>   </button>
+    <button class = "switch" onclick="animationSwitch()"><span id = "Close">Stream ON/OFF   </span>   </button>
+
+  </div>
+</div>
+
+
+<!-- two alternate searches: one for youtube links, and one for twitter links.
+     makes it clearer when you swap between the youtube/twitter iframes.
+     each search has its own function that convert the link to a proper embedded form.
+     Potentially can easily make it one function
+-->
+
+<div class="search-box">
+    <input type="search" class = "searchSettings" id="myInput" onsearch="searchFunction(searchBar)">
+    <span></span>
+</div>
+<div class="search-box">
+    <input type="search" class = "searchSettings" id="myInput2" onsearch="searchFunction(searchBar2)">
+    <span></span>
+</div>
+
+<!-- Skew container is really the cover that opens and closes depending if you are starting or done with the stream
+     each translator is an invisible container that carries a skewed box out of view. Maybe I should clarify this in the css section instead. Switch is used to handle any new opening/closing
+-->
+  <div id="skewContainer">
+    
+    <div class="translator">
+      <section class = "skewedBox"> </section>
+    </div>
+
+    <div class="translator">
+      <section class = "skewedBox"> </section>
+    </div>
+
+    <div class="translator">
+      <section class = "skewedBox"> </section>
+    </div>
+
+    <div class="translator">
+      <section class = "skewedBox"> </section>
+    </div>
+
+    <div class="translator">
+      <section class = "skewedBox"> </section>
+    </div>
+
+    <div class="translator">
+      <section class = "skewedBox"> </section>
+    </div>
+
+    <img id = "cast" src="Images/Cast.jpeg" alt="">
+    
+    <img id = "logo" src="Images/Logo.png" alt="">
+
+  </div>
+
+<!-- Main core of the program has each of the views of each member. -->
+  <div class="webContainer">
+
+   <div class="box active" id = "user3">
+
+      <div id = "er" class="face face1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="container">
+          <video class = "video" id = "stream3" autoplay muted controls><source src="Videos/Fire.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+      
+      <div id = "er2" class="face face2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+  </div>
+
+   <div class="box active" id = "user1">
+
+      <div id = "ko" class="face face1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="container">
+          <video class = "video" id = "stream1"autoplay muted controls><source src="Videos/Space.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+      
+      <div id = "ko2" class="face face2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+
+   <div class="box active" id = "user4">
+
+      <div id = "ja" class="face face1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="container">
+          <video class = "video" id = "stream4"autoplay muted controls><source src="Videos/Tornado.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+      
+      <div id = "ja2" class="face face2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+
+   <div class="box active" id = "user2">
+
+      <div id = "jm" class="face face1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="container">
+          <video class = "video" id = "stream2" autoplay muted controls><source src="Videos/WaterFall.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+      
+      <div id = "jm2" class="face face2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+
+
+   <div class="box active" id = "user5">
+
+      <div id = "al" class="face face1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="container">
+          <video class = "video" id = "stream5" autoplay muted controls><source src="Videos/Volcanic.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+      
+      <div id = "al2" class="face face2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </div>
+
+    </div>
+
+
+   <div class="box active" id = "user6">
+
+      <div id = "gu" class="face face1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="container">
+          <video class = "video" id = "guest" autoplay muted controls><source src="Videos/Farmlands.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+      
+      <div id = "gu2" class="face face2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+
+<!-- The social view(youtube/twitter) -->
+   <div class="box active" id = "socialBox">
+
+      <div id = "screen" class="face search search1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <div id = "screen2" class="face search search2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+        <div id = "check" class="container">
+    <iframe id = "viewer" src="nothing" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe id = "twitter" border=0 frameborder=0 height=250 width=340 scrolling = "no" 
+ src=""></iframe>
+
+        </div>
+
+    </div>
+  
+</div>
+
+
+<script src="Javascript/skew.js"></script>
+<script src="Javascript/main.js"></script>
+
+</body>
+</html>
