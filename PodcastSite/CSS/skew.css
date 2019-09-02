@@ -1,0 +1,515 @@
+#skewContainer{
+  width: 90%;
+  height: 70vh;
+  box-shadow: 5px 20px 20px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 150;
+
+}
+
+.translator{
+transition: 1.5s;	
+}
+
+.translator .skewedBox{
+	transform: skew(0deg, -33deg);
+}
+
+.translator:nth-child(6) .skewedBox{
+	background: #ececec;
+	padding: 20% 0;
+}
+
+.translator:nth-child(5) .skewedBox{
+	background: #4b4b4b;
+	width: 100%;
+	padding: 7.5% 0;
+}
+
+.translator:nth-child(4) .skewedBox{
+	background: #7e7e7e;
+	width: 100%;
+	padding: 7.5% 0;
+}
+
+.translator:nth-child(3) .skewedBox{
+	background: #b7b7b7;
+	width: 100%;
+	padding: 7.5% 0;
+}
+
+.translator:nth-child(2) .skewedBox{
+	background: #c4c4c4;
+	width: 100%;
+	padding: 7.5% 0;
+}
+
+.translator:nth-child(1) .skewedBox{
+	background: #ececec;
+	width: 100%;
+	padding: 20% 0;
+}
+
+
+.translator:nth-child(1){
+	width: 300%;
+	z-index: 0;
+	overflow: hidden;
+	position: absolute;
+	left:-150%;
+	transform: translateY(-70vh);
+}
+
+#cast{
+	position: absolute;
+}
+
+#logo{
+	position: absolute;
+}
+
+
+@keyframes animation6{
+0%{
+	transform: translate(0,40);
+
+
+}
+100%{
+	transform: translate(615px, 0); 
+}
+
+}
+@keyframes animation5{
+
+0%{
+	transform: translate(0,0);
+	}
+
+100%{
+	transform: translate(1250px, -815px);
+	}
+
+}
+@keyframes animation4{
+
+0%{
+	transform: translate(0,-20);
+	}
+
+100%{
+	transform: translate(-1250px, 810px);
+	}
+
+}
+@keyframes animation3{
+
+0%{
+	transform: translate(0,-30);
+	}
+
+100%{
+	transform: translate(1250px, -810px);
+	}
+
+}
+@keyframes animation2{
+
+0%{
+	transform: translate(0,-40);
+	}
+
+100%{
+	transform: translate(-1250px, 815px);
+	}
+
+}
+@keyframes animation1{
+
+0%{
+	}
+
+100%{
+	transform: translate(-35%, -50%);
+	}
+
+}
+@keyframes animationCast{
+
+0%{
+	transform: translate(0, 0);
+	}
+
+100%{
+	transform: translate(617px, 0); 
+	}
+
+}
+@keyframes animationLogo{
+
+0%{
+	transform: translate(0, 0);
+	}
+
+100%{
+	transform: translate(-1015px, 0);
+	}
+
+}
+
+#skewContainer .lock.translator:nth-child(6){ 
+	animation: animation6 2s ease-in-out;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+#skewContainer .lock.translator:nth-child(5){
+
+	animation: animation5 2s ease-in-out;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+#skewContainer .lock.translator:nth-child(4){
+	animation: animation4 2s ease-in-out;
+	animation-delay: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+#skewContainer .lock.translator:nth-child(3){
+	animation: animation3 2s ease-in-out;
+	animation-delay: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+#skewContainer .lock.translator:nth-child(2){
+	animation: animation2 2s ease-in-out;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+
+}
+
+#skewContainer .lock.translator:nth-child(1){
+ 	animation: animation1 2s ease-in-out;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+}
+
+#skewContainer .lock#cast{
+
+animation:animationCast ease-in-out 2s;
+animation-delay: 1s;
+animation-fill-mode: forwards;
+}
+
+#skewContainer .lock#logo{
+
+animation:animationLogo ease-in-out 2s; 
+animation-delay: 1s;
+animation-fill-mode: forwards;
+}
+
+
+
+
+#skewContainer .open.translator:nth-child(6){ 
+	animation: animation6-2 1.4s ease-in-out;
+	animation-delay: 0.5s;
+	animation-fill-mode: backwards;
+}
+
+#skewContainer .open.translator:nth-child(5){
+
+	animation: animation5-2 1.5s ease-in-out;
+	animation-fill-mode: backwards;
+}
+
+#skewContainer .open.translator:nth-child(4){
+	animation: animation4-2 1.5s ease-in-out;
+	animation-delay: 0.5s;
+	animation-fill-mode: backwards;
+}
+
+#skewContainer .open.translator:nth-child(3){
+	animation: animation3-2 1.5s ease-in-out;
+	animation-delay: 0.5s;
+	animation-fill-mode: backwards;
+}
+
+#skewContainer .open.translator:nth-child(2){
+	animation: animation2-2 1.5s ease-in-out;
+	animation-fill-mode: backwards;
+
+}
+
+#skewContainer .open.translator:nth-child(1){
+ 	animation: animation1-2 1.5s ease-in-out;
+	animation-delay: 1s;
+	animation-fill-mode: backwards;
+}
+
+#skewContainer .open#cast{
+
+animation:animationCast-2 ease-in-out 2s;
+animation-delay: 1s;
+animation-fill-mode: backwards;
+}
+
+#skewContainer .open#logo{
+
+animation:animationLogo-2 ease-in-out 2s; 
+animation-delay: 1s;
+animation-fill-mode: backwards;
+}
+
+@keyframes animation6-2{
+100%{
+	transform: translate(0,40);
+
+
+}
+0%{
+	transform: translate(615px, 0); 
+}
+
+}
+@keyframes animation5-2{
+
+100%{
+	transform: translate(0,0);
+	}
+
+0%{
+	transform: translate(1250px, -815px);
+	}
+
+}
+@keyframes animation4-2{
+
+100%{
+	transform: translate(0,-20);
+	}
+
+0%{
+	transform: translate(-1250px, 810px);
+	}
+
+}
+@keyframes animation3-2{
+
+100%{
+	transform: translate(0,-30);
+	}
+
+0%{
+	transform: translate(1250px, -810px);
+	}
+
+}
+@keyframes animation2-2{
+
+100%{
+	transform: translate(0,-40);
+	}
+
+0%{
+	transform: translate(-1250px, 815px);
+	}
+
+}
+@keyframes animation1-2{
+100%{
+		transform: translate(0, 0);
+	}
+
+0%{
+	transform: translate(-35%, -50%);
+	}
+
+}
+@keyframes animationCast-2{
+
+100%{
+	transform: translate(0, 0);
+	}
+
+0%{
+	transform: translate(617px, 0); 
+	}
+
+}
+@keyframes animationLogo-2{
+
+100%{
+	transform: translate(0, 0);
+	}
+
+0%{
+	transform: translate(-1015px, 0);
+	}
+
+}
+
+@media only screen and (max-width: 649px) {
+.translator:nth-child(6) .skewedBox{
+	padding: 30% 0;
+}
+
+.translator:nth-child(5) .skewedBox{
+	padding: 11% 0;
+}
+
+.translator:nth-child(4) .skewedBox{
+	padding: 11% 0;
+}
+
+.translator:nth-child(3) .skewedBox{
+	padding: 11% 0;
+}
+
+.translator:nth-child(2) .skewedBox{
+	padding: 11% 0;
+}
+
+.translator:nth-child(1) .skewedBox{
+	padding: 30% 0;
+}
+
+.translator:nth-child(1){
+	width: 275%;
+	z-index: 0;
+	overflow: hidden;
+	position: absolute;
+	left:-150%;
+	transform: translateY(-70vh);
+}
+
+#cast{
+	position: absolute;
+	left:50vw;
+	top: 15vh;
+	height: 55vh;
+	width: 40vw;
+}
+
+#logo{
+	position: absolute;
+	left:25vw;
+	top: 22%;
+	height: 30vh;
+	width: 30vh;
+}
+}
+
+@media only screen and (min-width: 650px) {
+#cast{
+	position: absolute;
+	left:50vw;
+	top: 10vh;
+	height: 65vh;
+	width: 40vw;
+}
+
+#logo{
+
+	position: absolute;
+	left:35vw;
+	top: 22%;
+	height: 30vh;
+	width: 30vh;
+}
+
+@keyframes animation1{
+
+0%{
+	}
+
+100%{
+	transform: translate(-70%, -70%);
+	}
+
+}
+
+@keyframes animation1-2{
+100%{
+		transform: translate(0, 0);
+	}
+
+0%{
+	transform: translate(-70%, -70%);
+	}
+
+}
+}
+
+@media only screen and (min-width: 798px) {
+	#skewContainer{
+ 		height: 80vh;
+	}
+
+#cast{
+	left:43vw;
+	top:-14.8vh;
+	height: 100vh;
+	width: 50vw;
+}
+
+#logo{
+	left:20vw;
+	top: 25%;
+	height: 40vh;
+	width: 35vw;
+}
+
+}
+
+@media only screen and (min-width: 1008px) {
+	#skewContainer{
+ 		height: 600px;
+	}
+
+	#cast{
+		position: absolute;
+		left:58%;
+		top:-9.8%;
+		height: 100vh;
+		width: 40vw;
+
+	}
+
+	#logo{
+		position: absolute;
+		left:30%;
+		top: 18%;
+		height: 50vh;
+		width: 50vh;
+	}
+
+
+	#skewContainer .lock.translator:nth-child(1){
+		animation-delay: 1s;
+	}
+
+	@keyframes animation1{
+
+		0%{
+		}
+
+		100%{
+		transform: translate(-35%, -50%);
+		}
+
+	}
+
+	@keyframes animation1-2{
+	100%{
+			transform: translate(0, 0);
+		}
+
+	0%{
+		transform: translate(-35%, -50%);
+		}
+
+	}
+}
